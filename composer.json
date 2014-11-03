@@ -1,0 +1,13 @@
+{
+	"name": "webedit/message",
+	"require": {
+		"webedit/application": "dev-master",
+		"webedit/config": "dev-master",
+		"nette/di": "dev-master"
+	},
+	"autoload": {
+		"psr-4": {
+			"WebEdit\\": "src/"
+		}
+	}
+}
