@@ -2,7 +2,7 @@
 
 namespace WebEdit\Message\Control;
 
-use WebEdit\Message;
+use WebEdit;
 
 /**
  * Interface Factory
@@ -13,7 +13,7 @@ interface Factory
 {
 
 	/**
-	 * @return Message\Control
+	 * @return WebEdit\Message\Control
 	 */
 	public function create();
 }

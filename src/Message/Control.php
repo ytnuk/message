@@ -2,14 +2,14 @@
 
 namespace WebEdit\Message;
 
-use WebEdit\Application;
+use WebEdit;
 
 /**
  * Class Control
  *
  * @package WebEdit\Message
  */
-final class Control extends Application\Control
+final class Control extends WebEdit\Application\Control
 {
 
 	protected function startup()

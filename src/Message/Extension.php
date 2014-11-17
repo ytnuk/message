@@ -2,16 +2,15 @@
 
 namespace WebEdit\Message;
 
-use Nette\DI;
-use WebEdit\Application;
-use WebEdit\Config;
+use Nette;
+use WebEdit;
 
 /**
  * Class Extension
  *
  * @package WebEdit\Message
  */
-final class Extension extends DI\CompilerExtension implements Config\Provider
+final class Extension extends Nette\DI\CompilerExtension implements WebEdit\Config\Provider
 {
 
 	/**
@@ -23,7 +22,7 @@ final class Extension extends DI\CompilerExtension implements Config\Provider
 			'services' => [
 				'message' => [
 					'implement' => Control\Factory::class,
-					'tags' => [Application\Extension::COMPONENT_TAG]
+					'tags' => [WebEdit\Application\Extension::COMPONENT_TAG]
 				]
 			]
 		];
