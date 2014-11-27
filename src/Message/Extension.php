@@ -4,6 +4,7 @@ namespace WebEdit\Message;
 
 use Nette;
 use WebEdit;
+use Kdyby;
 
 /**
  * Class Extension
@@ -23,6 +24,11 @@ final class Extension extends Nette\DI\CompilerExtension implements WebEdit\Conf
 				'message' => [
 					'implement' => Control\Factory::class,
 					'tags' => [WebEdit\Application\Extension::COMPONENT_TAG]
+				]
+			],
+			Kdyby\Translation\DI\TranslationExtension::class => [
+				'dirs' => [
+					__DIR__ . '/../../locale'
 				]
 			]
 		];
