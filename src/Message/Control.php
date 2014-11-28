@@ -1,15 +1,15 @@
 <?php
 
-namespace WebEdit\Message;
+namespace Kutny\Message;
 
-use WebEdit;
+use Kutny;
 
 /**
  * Class Control
  *
- * @package WebEdit\Message
+ * @package Kutny\Message
  */
-final class Control extends WebEdit\Application\Control
+final class Control extends Kutny\Application\Control
 {
 
 	protected function startup()

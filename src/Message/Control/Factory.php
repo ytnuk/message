@@ -1,19 +1,19 @@
 <?php
 
-namespace WebEdit\Message\Control;
+namespace Kutny\Message\Control;
 
-use WebEdit;
+use Kutny;
 
 /**
  * Interface Factory
  *
- * @package WebEdit\Message
+ * @package Kutny\Message
  */
 interface Factory
 {
 
 	/**
-	 * @return WebEdit\Message\Control
+	 * @return Kutny\Message\Control
 	 */
 	public function create();
 }

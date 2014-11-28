@@ -1,17 +1,17 @@
 <?php
 
-namespace WebEdit\Message;
+namespace Kutny\Message;
 
 use Nette;
-use WebEdit;
+use Kutny;
 use Kdyby;
 
 /**
  * Class Extension
  *
- * @package WebEdit\Message
+ * @package Kutny\Message
  */
-final class Extension extends Nette\DI\CompilerExtension implements WebEdit\Config\Provider
+final class Extension extends Nette\DI\CompilerExtension implements Kutny\Config\Provider
 {
 
 	/**
@@ -23,7 +23,7 @@ final class Extension extends Nette\DI\CompilerExtension implements WebEdit\Conf
 			'services' => [
 				'message' => [
 					'implement' => Control\Factory::class,
-					'tags' => [WebEdit\Application\Extension::COMPONENT_TAG]
+					'tags' => [Kutny\Application\Extension::COMPONENT_TAG]
 				]
 			],
 			Kdyby\Translation\DI\TranslationExtension::class => [
