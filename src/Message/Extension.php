@@ -2,9 +2,9 @@
 
 namespace Ytnuk\Message;
 
+use Kdyby;
 use Nette;
 use Ytnuk;
-use Kdyby;
 
 /**
  * Class Extension
