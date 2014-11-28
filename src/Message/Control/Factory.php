@@ -1,19 +1,19 @@
 <?php
 
-namespace Kutny\Message\Control;
+namespace Ytnuk\Message\Control;
 
-use Kutny;
+use Ytnuk;
 
 /**
  * Interface Factory
  *
- * @package Kutny\Message
+ * @package Ytnuk\Message
  */
 interface Factory
 {
 
 	/**
-	 * @return Kutny\Message\Control
+	 * @return Ytnuk\Message\Control
 	 */
 	public function create();
 }

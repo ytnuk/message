@@ -1,13 +1,13 @@
 {
-	"name": "kutny/message",
+	"name": "ytnuk/message",
 	"require": {
-		"kutny/application": "dev-master",
-		"kutny/config": "dev-master",
+		"ytnuk/application": "dev-master",
+		"ytnuk/config": "dev-master",
 		"nette/di": "dev-master"
 	},
 	"autoload": {
 		"psr-4": {
-			"Kutny\\": "src/"
+			"Ytnuk\\": "src/"
 		}
 	}
 }

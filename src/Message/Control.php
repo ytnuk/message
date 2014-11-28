@@ -1,15 +1,15 @@
 <?php
 
-namespace Kutny\Message;
+namespace Ytnuk\Message;
 
-use Kutny;
+use Ytnuk;
 
 /**
  * Class Control
  *
- * @package Kutny\Message
+ * @package Ytnuk\Message
  */
-final class Control extends Kutny\Application\Control
+final class Control extends Ytnuk\Application\Control
 {
 
 	protected function startup()
