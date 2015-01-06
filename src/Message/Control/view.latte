@@ -1,8 +1,26 @@
-<aside n:inner-foreach="$messages as $message" n:if="$messages">
-	<div class="alert alert-{$message->type}">
+<aside n:if="$messages" id="{$control->getUniqueId()}">
+	<div class="alert alert-{$message->type}" n:foreach="$messages as $message">
 		<p>
 			<strong>{='message.type.' . $message->type . '.label'|translate}!</strong>
 			{$message->message|translate}
 		</p>
 	</div>
+	<script>
+		Notification.requestPermission(function(result){
+			switch(result) {
+				case 'granted':
+					$({='#' . $control->getUniqueId()}).hide();
+					{foreach $messages as $message}
+						var notification = new Notification({='message.type.' . $message->type . '.label'|translate}, {
+							body: {$message->message|translate}
+						});
+						setTimeout(function(notification){
+							console.log(notification);
+							notification.close();
+						}, 5000, notification);
+					{/foreach}
+					break;
+			};
+		});
+	</script>
 </aside>
