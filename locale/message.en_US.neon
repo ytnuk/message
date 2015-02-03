@@ -1,5 +1,5 @@
 type:
 	success:
 		label: Success
-	error:
+	warning:
 		label: Error

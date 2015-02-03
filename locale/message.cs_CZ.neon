@@ -1,5 +1,5 @@
 type:
 	success:
 		label: Úspěch
-	error:
+	warning:
 		label: Chyba
