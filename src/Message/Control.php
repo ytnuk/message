@@ -14,7 +14,14 @@ final class Control extends Ytnuk\Application\Control
 
 	protected function startup()
 	{
-		//TODO: use Flash/Message storage whene available
-		$this->template->messages = $this->parent->template->flashes;
+		//TODO: use Flash/Message storage when available
+		$parameters = [];
+		$parent = $this->getParent();
+		if ($parent instanceof Ytnuk\Application\Control) {
+			$parameters = $parent->getTemplate()
+				->getParameters();
+		}
+		$this->getTemplate()
+			->add('messages', isset($parameters['flashes']) ? $parameters['flashes'] : []);
 	}
 }
