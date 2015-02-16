@@ -18,10 +18,8 @@ final class Control extends Ytnuk\Application\Control
 		$parameters = [];
 		$parent = $this->getParent();
 		if ($parent instanceof Ytnuk\Application\Control) {
-			$parameters = $parent->getTemplate()
-				->getParameters();
+			$parameters = $parent->getTemplate()->getParameters();
 		}
-		$this->getTemplate()
-			->add('messages', isset($parameters['flashes']) ? $parameters['flashes'] : []);
+		$this->getTemplate()->add('messages', isset($parameters['flashes']) ? $parameters['flashes'] : []);
 	}
 }
