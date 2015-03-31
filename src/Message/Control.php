@@ -2,6 +2,7 @@
 
 namespace Ytnuk\Message;
 
+use Nette;
 use Ytnuk;
 
 /**
@@ -17,7 +18,7 @@ final class Control extends Ytnuk\Application\Control
 		//TODO: use Flash/Message storage when available
 		$parameters = [];
 		$parent = $this->getParent();
-		if ($parent instanceof Ytnuk\Application\Control) {
+		if ($parent instanceof Nette\Application\UI\Control) {
 			$parameters = $parent->getTemplate()->getParameters();
 		}
 		$this->getTemplate()->add('messages', isset($parameters['flashes']) ? $parameters['flashes'] : []);
