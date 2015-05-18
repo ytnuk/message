@@ -1,5 +1,9 @@
 type:
 	success:
 		label: Success
+	info:
+		label: Info
 	warning:
-		label: Error
+		label: Warning
+	danger:
+		label: Danger

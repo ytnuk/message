@@ -1,5 +1,9 @@
 type:
 	success:
 		label: Úspěch
+	info:
+		label: Informace
 	warning:
-		label: Chyba
+		label: Varování
+	danger:
+		label: Nebezpečí
