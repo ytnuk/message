@@ -1,5 +1,4 @@
 <?php
-
 namespace Ytnuk\Message\Control;
 
 use Ytnuk;

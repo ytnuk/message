@@ -1,5 +1,4 @@
 <?php
-
 namespace Ytnuk\Message;
 
 use Nette;
@@ -10,7 +9,8 @@ use Ytnuk;
  *
  * @package Ytnuk\Message
  */
-final class Control extends Ytnuk\Application\Control
+final class Control
+	extends Ytnuk\Application\Control
 {
 
 	/**
@@ -20,8 +20,9 @@ final class Control extends Ytnuk\Application\Control
 	{
 		$parent = $this->lookup(Nette\Application\UI\Control::class);
 		$parameters = $parent->getTemplate()->getParameters();
+
 		return [
-			'messages' => isset($parameters['flashes']) ? $parameters['flashes'] : []
+			'messages' => isset($parameters['flashes']) ? $parameters['flashes'] : [],
 		];
 	}
 }

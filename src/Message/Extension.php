@@ -1,5 +1,4 @@
 <?php
-
 namespace Ytnuk\Message;
 
 use Kdyby;
@@ -11,7 +10,9 @@ use Ytnuk;
  *
  * @package Ytnuk\Message
  */
-final class Extension extends Nette\DI\CompilerExtension implements Ytnuk\Config\Provider
+final class Extension
+	extends Nette\DI\CompilerExtension
+	implements Ytnuk\Config\Provider
 {
 
 	/**
@@ -24,14 +25,14 @@ final class Extension extends Nette\DI\CompilerExtension implements Ytnuk\Config
 				[
 					'class' => Control::class,
 					'implement' => Control\Factory::class,
-					'tags' => [Ytnuk\Application\Extension::COMPONENT_TAG]
-				]
+					'tags' => [Ytnuk\Application\Extension::COMPONENT_TAG],
+				],
 			],
 			Kdyby\Translation\DI\TranslationExtension::class => [
 				'dirs' => [
-					__DIR__ . '/../../locale'
-				]
-			]
+					__DIR__ . '/../../locale',
+				],
+			],
 		];
 	}
 }
