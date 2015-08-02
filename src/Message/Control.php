@@ -18,11 +18,19 @@ final class Control
 	 */
 	protected function startup()
 	{
-		$parent = $this->lookup(Nette\Application\UI\Control::class);
-		$parameters = $parent->getTemplate()->getParameters();
+		$flashes = [];
+		if ($this->getPresenter()->hasFlashSession() && $session = $this->getPresenter()->getFlashSession()) {
+			/**
+			 * @var Nette\Application\UI\PresenterComponent $parent
+			 */
+			$parent = $this->lookup(Nette\Application\UI\PresenterComponent::class);
+			if (isset($session[$flashId = $parent->getParameterId('flash')])) {
+				$flashes = (array) $session[$flashId];
+			}
+		}
 
 		return [
-			'messages' => isset($parameters['flashes']) ? $parameters['flashes'] : [],
+			'messages' => $flashes,
 		];
 	}
 }
