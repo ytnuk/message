@@ -20,11 +20,8 @@ final class Control
 	{
 		$flashes = [];
 		if ($this->getPresenter()->hasFlashSession() && $session = $this->getPresenter()->getFlashSession()) {
-			/**
-			 * @var Nette\Application\UI\PresenterComponent $parent
-			 */
 			$parent = $this->lookup(Nette\Application\UI\PresenterComponent::class);
-			if (isset($session[$flashId = $parent->getParameterId('flash')])) {
+			if ($parent instanceof Nette\Application\UI\PresenterComponent && isset($session[$flashId = $parent->getParameterId('flash')])) {
 				$flashes = (array) $session[$flashId];
 			}
 		}
