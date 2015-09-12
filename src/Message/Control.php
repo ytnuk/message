@@ -4,19 +4,11 @@ namespace Ytnuk\Message;
 use Nette;
 use Ytnuk;
 
-/**
- * Class Control
- *
- * @package Ytnuk\Message
- */
 final class Control
 	extends Ytnuk\Application\Control
 {
 
-	/**
-	 * @return array
-	 */
-	protected function startup()
+	protected function startup() : array
 	{
 		$flashes = [];
 		if ($this->getPresenter()->hasFlashSession() && $session = $this->getPresenter()->getFlashSession()) {

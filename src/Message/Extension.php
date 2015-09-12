@@ -5,20 +5,12 @@ use Kdyby;
 use Nette;
 use Ytnuk;
 
-/**
- * Class Extension
- *
- * @package Ytnuk\Message
- */
 final class Extension
 	extends Nette\DI\CompilerExtension
 	implements Ytnuk\Config\Provider
 {
 
-	/**
-	 * @inheritdoc
-	 */
-	public function getConfigResources()
+	public function getConfigResources() : array
 	{
 		return [
 			'services' => [
