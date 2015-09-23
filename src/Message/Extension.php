@@ -17,7 +17,6 @@ final class Extension
 				[
 					'class' => Control::class,
 					'implement' => Control\Factory::class,
-					'tags' => [Ytnuk\Application\Extension::COMPONENT_TAG],
 				],
 			],
 			Kdyby\Translation\DI\TranslationExtension::class => [
