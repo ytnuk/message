@@ -2,7 +2,6 @@
 	"name": "ytnuk/message",
 	"require": {
 		"ytnuk/application": "dev-master",
-		"ytnuk/config": "dev-master",
 		"nette/di": "dev-master"
 	},
 	"autoload": {
