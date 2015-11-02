@@ -7,23 +7,20 @@ use Ytnuk;
 
 final class Extension
 	extends Nette\DI\CompilerExtension
-	implements Ytnuk\Config\Provider
+	implements Kdyby\Translation\DI\ITranslationProvider
 {
 
-	public function getConfigResources() : array
+	public function loadConfiguration()
+	{
+		parent::loadConfiguration();
+		$builder = $this->getContainerBuilder();
+		$builder->addDefinition($this->prefix('control'))->setImplement(Control\Factory::class);
+	}
+
+	public function getTranslationResources() : array
 	{
 		return [
-			'services' => [
-				[
-					'class' => Control::class,
-					'implement' => Control\Factory::class,
-				],
-			],
-			Kdyby\Translation\DI\TranslationExtension::class => [
-				'dirs' => [
-					__DIR__ . '/../../locale',
-				],
-			],
+			__DIR__ . '/../../locale',
 		];
 	}
 }
