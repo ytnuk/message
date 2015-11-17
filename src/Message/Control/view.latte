@@ -1,6 +1,6 @@
 <aside n:inner-foreach="$messages as $message">
-	<p class="alert alert-{$message->type}" data-notification>
-		<strong data-notification-title>{='message.type.' . $message->type . '.label'|translate}!</strong>
-		<span data-notification-body>{$message->message|translate}</span>
+	<p class="alert alert-{$message->type}">
+		<strong>{='message.type.' . $message->type . '.label'|translate}!</strong>
+		<span>{$message->message|translate}</span>
 	</p>
 </aside>
