@@ -1,8 +1,6 @@
 {
 	"name": "ytnuk/message",
-	"type": "ytnuk-module",
 	"require": {
-		"ytnuk/module": "dev-master",
 		"ytnuk/application": "dev-master",
 		"nette/di": "dev-master"
 	},
