@@ -2,7 +2,7 @@
 	"name": "ytnuk/message",
 	"extra": {
 		"extensions": {
-			"ytnuk/message": "Ytnuk\\Message\\Extension"
+			"ytnuk_message": "Ytnuk\\Message\\Extension"
 		}
 	},
 	"require": {
