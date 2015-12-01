@@ -8,8 +8,6 @@ final class Control
 	extends Ytnuk\Application\Control
 {
 
-	const NAME = 'message';
-
 	protected function startup() : array
 	{
 		$flashes = [];
